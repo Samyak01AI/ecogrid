@@ -5,7 +5,7 @@
 
 import type { GridData, Intervention, OptimizeRequest, OptimizeResponse } from './types';
 
-const API_BASE = '';
+const API_BASE = 'https://ecogrid-api-x64q.onrender.com';
 
 export async function fetchGrid(): Promise<GridData> {
   const res = await fetch(`${API_BASE}/api/grid`);
