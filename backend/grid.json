@@ -1,0 +1,4105 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85170000000001,
+              18.5154
+            ],
+            [
+              73.85270000000001,
+              18.5154
+            ],
+            [
+              73.85270000000001,
+              18.5164
+            ],
+            [
+              73.85170000000001,
+              18.5164
+            ],
+            [
+              73.85170000000001,
+              18.5154
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "A01",
+        "row": 0,
+        "col": 0,
+        "heat_score": 0.58,
+        "vegetation_deficit": 0.44,
+        "pedestrian_exposure": 1.0,
+        "connectivity_potential": 1.0,
+        "feasibility": 0.78,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85270000000001,
+              18.5154
+            ],
+            [
+              73.85370000000002,
+              18.5154
+            ],
+            [
+              73.85370000000002,
+              18.5164
+            ],
+            [
+              73.85270000000001,
+              18.5164
+            ],
+            [
+              73.85270000000001,
+              18.5154
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "A02",
+        "row": 0,
+        "col": 1,
+        "heat_score": 0.43,
+        "vegetation_deficit": 0.65,
+        "pedestrian_exposure": 0.91,
+        "connectivity_potential": 0.79,
+        "feasibility": 0.69,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8537,
+              18.5154
+            ],
+            [
+              73.85470000000001,
+              18.5154
+            ],
+            [
+              73.85470000000001,
+              18.5164
+            ],
+            [
+              73.8537,
+              18.5164
+            ],
+            [
+              73.8537,
+              18.5154
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "A03",
+        "row": 0,
+        "col": 2,
+        "heat_score": 0.38,
+        "vegetation_deficit": 0.78,
+        "pedestrian_exposure": 0.68,
+        "connectivity_potential": 0.55,
+        "feasibility": 0.79,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85470000000001,
+              18.5154
+            ],
+            [
+              73.85570000000001,
+              18.5154
+            ],
+            [
+              73.85570000000001,
+              18.5164
+            ],
+            [
+              73.85470000000001,
+              18.5164
+            ],
+            [
+              73.85470000000001,
+              18.5154
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "A04",
+        "row": 0,
+        "col": 3,
+        "heat_score": 0.47,
+        "vegetation_deficit": 0.75,
+        "pedestrian_exposure": 0.43,
+        "connectivity_potential": 0.37,
+        "feasibility": 0.96,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85570000000001,
+              18.5154
+            ],
+            [
+              73.85670000000002,
+              18.5154
+            ],
+            [
+              73.85670000000002,
+              18.5164
+            ],
+            [
+              73.85570000000001,
+              18.5164
+            ],
+            [
+              73.85570000000001,
+              18.5154
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "A05",
+        "row": 0,
+        "col": 4,
+        "heat_score": 0.62,
+        "vegetation_deficit": 0.66,
+        "pedestrian_exposure": 0.31,
+        "connectivity_potential": 0.26,
+        "feasibility": 0.92,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8567,
+              18.5154
+            ],
+            [
+              73.85770000000001,
+              18.5154
+            ],
+            [
+              73.85770000000001,
+              18.5164
+            ],
+            [
+              73.8567,
+              18.5164
+            ],
+            [
+              73.8567,
+              18.5154
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "A06",
+        "row": 0,
+        "col": 5,
+        "heat_score": 0.7,
+        "vegetation_deficit": 0.57,
+        "pedestrian_exposure": 0.26,
+        "connectivity_potential": 0.28,
+        "feasibility": 0.67,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85770000000001,
+              18.5154
+            ],
+            [
+              73.85870000000001,
+              18.5154
+            ],
+            [
+              73.85870000000001,
+              18.5164
+            ],
+            [
+              73.85770000000001,
+              18.5164
+            ],
+            [
+              73.85770000000001,
+              18.5154
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "A07",
+        "row": 0,
+        "col": 6,
+        "heat_score": 0.64,
+        "vegetation_deficit": 0.57,
+        "pedestrian_exposure": 0.19,
+        "connectivity_potential": 0.42,
+        "feasibility": 0.63,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85870000000001,
+              18.5154
+            ],
+            [
+              73.85970000000002,
+              18.5154
+            ],
+            [
+              73.85970000000002,
+              18.5164
+            ],
+            [
+              73.85870000000001,
+              18.5164
+            ],
+            [
+              73.85870000000001,
+              18.5154
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "A08",
+        "row": 0,
+        "col": 7,
+        "heat_score": 0.47,
+        "vegetation_deficit": 0.71,
+        "pedestrian_exposure": 0.17,
+        "connectivity_potential": 0.61,
+        "feasibility": 0.81,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8597,
+              18.5154
+            ],
+            [
+              73.86070000000001,
+              18.5154
+            ],
+            [
+              73.86070000000001,
+              18.5164
+            ],
+            [
+              73.8597,
+              18.5164
+            ],
+            [
+              73.8597,
+              18.5154
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "A09",
+        "row": 0,
+        "col": 8,
+        "heat_score": 0.24,
+        "vegetation_deficit": 0.96,
+        "pedestrian_exposure": 0.35,
+        "connectivity_potential": 0.82,
+        "feasibility": 0.85,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.86070000000001,
+              18.5154
+            ],
+            [
+              73.86170000000001,
+              18.5154
+            ],
+            [
+              73.86170000000001,
+              18.5164
+            ],
+            [
+              73.86070000000001,
+              18.5164
+            ],
+            [
+              73.86070000000001,
+              18.5154
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "A10",
+        "row": 0,
+        "col": 9,
+        "heat_score": 0.0,
+        "vegetation_deficit": 1.0,
+        "pedestrian_exposure": 0.69,
+        "connectivity_potential": 0.99,
+        "feasibility": 0.73,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85170000000001,
+              18.5164
+            ],
+            [
+              73.85270000000001,
+              18.5164
+            ],
+            [
+              73.85270000000001,
+              18.517400000000002
+            ],
+            [
+              73.85170000000001,
+              18.517400000000002
+            ],
+            [
+              73.85170000000001,
+              18.5164
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "B01",
+        "row": 1,
+        "col": 0,
+        "heat_score": 0.66,
+        "vegetation_deficit": 0.7,
+        "pedestrian_exposure": 0.73,
+        "connectivity_potential": 0.96,
+        "feasibility": 0.93,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85270000000001,
+              18.5164
+            ],
+            [
+              73.85370000000002,
+              18.5164
+            ],
+            [
+              73.85370000000002,
+              18.517400000000002
+            ],
+            [
+              73.85270000000001,
+              18.517400000000002
+            ],
+            [
+              73.85270000000001,
+              18.5164
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "B02",
+        "row": 1,
+        "col": 1,
+        "heat_score": 0.52,
+        "vegetation_deficit": 0.26,
+        "pedestrian_exposure": 0.7,
+        "connectivity_potential": 1.0,
+        "feasibility": 0.93,
+        "land_use": "green_space"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8537,
+              18.5164
+            ],
+            [
+              73.85470000000001,
+              18.5164
+            ],
+            [
+              73.85470000000001,
+              18.517400000000002
+            ],
+            [
+              73.8537,
+              18.517400000000002
+            ],
+            [
+              73.8537,
+              18.5164
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "B03",
+        "row": 1,
+        "col": 2,
+        "heat_score": 0.46,
+        "vegetation_deficit": 0.6,
+        "pedestrian_exposure": 0.59,
+        "connectivity_potential": 0.54,
+        "feasibility": 0.87,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85470000000001,
+              18.5164
+            ],
+            [
+              73.85570000000001,
+              18.5164
+            ],
+            [
+              73.85570000000001,
+              18.517400000000002
+            ],
+            [
+              73.85470000000001,
+              18.517400000000002
+            ],
+            [
+              73.85470000000001,
+              18.5164
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "B04",
+        "row": 1,
+        "col": 3,
+        "heat_score": 0.53,
+        "vegetation_deficit": 0.54,
+        "pedestrian_exposure": 0.47,
+        "connectivity_potential": 0.4,
+        "feasibility": 0.69,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85570000000001,
+              18.5164
+            ],
+            [
+              73.85670000000002,
+              18.5164
+            ],
+            [
+              73.85670000000002,
+              18.517400000000002
+            ],
+            [
+              73.85570000000001,
+              18.517400000000002
+            ],
+            [
+              73.85570000000001,
+              18.5164
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "B05",
+        "row": 1,
+        "col": 4,
+        "heat_score": 0.65,
+        "vegetation_deficit": 0.44,
+        "pedestrian_exposure": 0.68,
+        "connectivity_potential": 0.32,
+        "feasibility": 0.68,
+        "land_use": "sidewalk"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8567,
+              18.5164
+            ],
+            [
+              73.85770000000001,
+              18.5164
+            ],
+            [
+              73.85770000000001,
+              18.517400000000002
+            ],
+            [
+              73.8567,
+              18.517400000000002
+            ],
+            [
+              73.8567,
+              18.5164
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "B06",
+        "row": 1,
+        "col": 5,
+        "heat_score": 0.7,
+        "vegetation_deficit": 0.08,
+        "pedestrian_exposure": 0.43,
+        "connectivity_potential": 0.65,
+        "feasibility": 0.71,
+        "land_use": "green_space"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85770000000001,
+              18.5164
+            ],
+            [
+              73.85870000000001,
+              18.5164
+            ],
+            [
+              73.85870000000001,
+              18.517400000000002
+            ],
+            [
+              73.85770000000001,
+              18.517400000000002
+            ],
+            [
+              73.85770000000001,
+              18.5164
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "B07",
+        "row": 1,
+        "col": 6,
+        "heat_score": 0.67,
+        "vegetation_deficit": 0.42,
+        "pedestrian_exposure": 0.28,
+        "connectivity_potential": 0.45,
+        "feasibility": 0.0,
+        "land_use": "building"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85870000000001,
+              18.5164
+            ],
+            [
+              73.85970000000002,
+              18.5164
+            ],
+            [
+              73.85970000000002,
+              18.517400000000002
+            ],
+            [
+              73.85870000000001,
+              18.517400000000002
+            ],
+            [
+              73.85870000000001,
+              18.5164
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "B08",
+        "row": 1,
+        "col": 7,
+        "heat_score": 0.55,
+        "vegetation_deficit": 0.56,
+        "pedestrian_exposure": 0.32,
+        "connectivity_potential": 0.59,
+        "feasibility": 0.7,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8597,
+              18.5164
+            ],
+            [
+              73.86070000000001,
+              18.5164
+            ],
+            [
+              73.86070000000001,
+              18.517400000000002
+            ],
+            [
+              73.8597,
+              18.517400000000002
+            ],
+            [
+              73.8597,
+              18.5164
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "B09",
+        "row": 1,
+        "col": 8,
+        "heat_score": 0.38,
+        "vegetation_deficit": 0.73,
+        "pedestrian_exposure": 0.62,
+        "connectivity_potential": 0.74,
+        "feasibility": 0.79,
+        "land_use": "sidewalk"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.86070000000001,
+              18.5164
+            ],
+            [
+              73.86170000000001,
+              18.5164
+            ],
+            [
+              73.86170000000001,
+              18.517400000000002
+            ],
+            [
+              73.86070000000001,
+              18.517400000000002
+            ],
+            [
+              73.86070000000001,
+              18.5164
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "B10",
+        "row": 1,
+        "col": 9,
+        "heat_score": 0.21,
+        "vegetation_deficit": 1.0,
+        "pedestrian_exposure": 0.56,
+        "connectivity_potential": 0.86,
+        "feasibility": 0.94,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85170000000001,
+              18.5174
+            ],
+            [
+              73.85270000000001,
+              18.5174
+            ],
+            [
+              73.85270000000001,
+              18.5184
+            ],
+            [
+              73.85170000000001,
+              18.5184
+            ],
+            [
+              73.85170000000001,
+              18.5174
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "C01",
+        "row": 2,
+        "col": 0,
+        "heat_score": 0.79,
+        "vegetation_deficit": 0.84,
+        "pedestrian_exposure": 0.49,
+        "connectivity_potential": 0.91,
+        "feasibility": 0.63,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85270000000001,
+              18.5174
+            ],
+            [
+              73.85370000000002,
+              18.5174
+            ],
+            [
+              73.85370000000002,
+              18.5184
+            ],
+            [
+              73.85270000000001,
+              18.5184
+            ],
+            [
+              73.85270000000001,
+              18.5174
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "C02",
+        "row": 2,
+        "col": 1,
+        "heat_score": 0.65,
+        "vegetation_deficit": 0.63,
+        "pedestrian_exposure": 0.75,
+        "connectivity_potential": 0.71,
+        "feasibility": 0.77,
+        "land_use": "sidewalk"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8537,
+              18.5174
+            ],
+            [
+              73.85470000000001,
+              18.5174
+            ],
+            [
+              73.85470000000001,
+              18.5184
+            ],
+            [
+              73.8537,
+              18.5184
+            ],
+            [
+              73.8537,
+              18.5174
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "C03",
+        "row": 2,
+        "col": 2,
+        "heat_score": 0.61,
+        "vegetation_deficit": 0.62,
+        "pedestrian_exposure": 0.5,
+        "connectivity_potential": 0.52,
+        "feasibility": 0.85,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85470000000001,
+              18.5174
+            ],
+            [
+              73.85570000000001,
+              18.5174
+            ],
+            [
+              73.85570000000001,
+              18.5184
+            ],
+            [
+              73.85470000000001,
+              18.5184
+            ],
+            [
+              73.85470000000001,
+              18.5174
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "C04",
+        "row": 2,
+        "col": 3,
+        "heat_score": 0.63,
+        "vegetation_deficit": 0.52,
+        "pedestrian_exposure": 0.35,
+        "connectivity_potential": 0.41,
+        "feasibility": 0.0,
+        "land_use": "building"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85570000000001,
+              18.5174
+            ],
+            [
+              73.85670000000002,
+              18.5174
+            ],
+            [
+              73.85670000000002,
+              18.5184
+            ],
+            [
+              73.85570000000001,
+              18.5184
+            ],
+            [
+              73.85570000000001,
+              18.5174
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "C05",
+        "row": 2,
+        "col": 4,
+        "heat_score": 0.69,
+        "vegetation_deficit": 0.4,
+        "pedestrian_exposure": 0.4,
+        "connectivity_potential": 0.37,
+        "feasibility": 0.68,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8567,
+              18.5174
+            ],
+            [
+              73.85770000000001,
+              18.5174
+            ],
+            [
+              73.85770000000001,
+              18.5184
+            ],
+            [
+              73.8567,
+              18.5184
+            ],
+            [
+              73.8567,
+              18.5174
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "C06",
+        "row": 2,
+        "col": 5,
+        "heat_score": 0.72,
+        "vegetation_deficit": 0.34,
+        "pedestrian_exposure": 0.42,
+        "connectivity_potential": 0.4,
+        "feasibility": 0.88,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85770000000001,
+              18.5174
+            ],
+            [
+              73.85870000000001,
+              18.5174
+            ],
+            [
+              73.85870000000001,
+              18.5184
+            ],
+            [
+              73.85770000000001,
+              18.5184
+            ],
+            [
+              73.85770000000001,
+              18.5174
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "C07",
+        "row": 2,
+        "col": 6,
+        "heat_score": 0.69,
+        "vegetation_deficit": 0.41,
+        "pedestrian_exposure": 0.44,
+        "connectivity_potential": 0.47,
+        "feasibility": 0.8,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85870000000001,
+              18.5174
+            ],
+            [
+              73.85970000000002,
+              18.5174
+            ],
+            [
+              73.85970000000002,
+              18.5184
+            ],
+            [
+              73.85870000000001,
+              18.5184
+            ],
+            [
+              73.85870000000001,
+              18.5174
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "C08",
+        "row": 2,
+        "col": 7,
+        "heat_score": 0.64,
+        "vegetation_deficit": 0.26,
+        "pedestrian_exposure": 0.41,
+        "connectivity_potential": 0.85,
+        "feasibility": 0.77,
+        "land_use": "green_space"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8597,
+              18.5174
+            ],
+            [
+              73.86070000000001,
+              18.5174
+            ],
+            [
+              73.86070000000001,
+              18.5184
+            ],
+            [
+              73.8597,
+              18.5184
+            ],
+            [
+              73.8597,
+              18.5174
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "C09",
+        "row": 2,
+        "col": 8,
+        "heat_score": 0.54,
+        "vegetation_deficit": 0.65,
+        "pedestrian_exposure": 0.42,
+        "connectivity_potential": 0.64,
+        "feasibility": 0.86,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.86070000000001,
+              18.5174
+            ],
+            [
+              73.86170000000001,
+              18.5174
+            ],
+            [
+              73.86170000000001,
+              18.5184
+            ],
+            [
+              73.86070000000001,
+              18.5184
+            ],
+            [
+              73.86070000000001,
+              18.5174
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "C10",
+        "row": 2,
+        "col": 9,
+        "heat_score": 0.4,
+        "vegetation_deficit": 0.81,
+        "pedestrian_exposure": 0.55,
+        "connectivity_potential": 0.71,
+        "feasibility": 0.6,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85170000000001,
+              18.5184
+            ],
+            [
+              73.85270000000001,
+              18.5184
+            ],
+            [
+              73.85270000000001,
+              18.5194
+            ],
+            [
+              73.85170000000001,
+              18.5194
+            ],
+            [
+              73.85170000000001,
+              18.5184
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "D01",
+        "row": 3,
+        "col": 0,
+        "heat_score": 0.86,
+        "vegetation_deficit": 0.85,
+        "pedestrian_exposure": 0.29,
+        "connectivity_potential": 0.86,
+        "feasibility": 0.9,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85270000000001,
+              18.5184
+            ],
+            [
+              73.85370000000002,
+              18.5184
+            ],
+            [
+              73.85370000000002,
+              18.5194
+            ],
+            [
+              73.85270000000001,
+              18.5194
+            ],
+            [
+              73.85270000000001,
+              18.5184
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "D02",
+        "row": 3,
+        "col": 1,
+        "heat_score": 0.76,
+        "vegetation_deficit": 0.63,
+        "pedestrian_exposure": 0.26,
+        "connectivity_potential": 0.67,
+        "feasibility": 0.0,
+        "land_use": "building"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8537,
+              18.5184
+            ],
+            [
+              73.85470000000001,
+              18.5184
+            ],
+            [
+              73.85470000000001,
+              18.5194
+            ],
+            [
+              73.8537,
+              18.5194
+            ],
+            [
+              73.8537,
+              18.5184
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "D03",
+        "row": 3,
+        "col": 2,
+        "heat_score": 0.72,
+        "vegetation_deficit": 0.62,
+        "pedestrian_exposure": 0.44,
+        "connectivity_potential": 0.5,
+        "feasibility": 0.91,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85470000000001,
+              18.5184
+            ],
+            [
+              73.85570000000001,
+              18.5184
+            ],
+            [
+              73.85570000000001,
+              18.5194
+            ],
+            [
+              73.85470000000001,
+              18.5194
+            ],
+            [
+              73.85470000000001,
+              18.5184
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "D04",
+        "row": 3,
+        "col": 3,
+        "heat_score": 0.73,
+        "vegetation_deficit": 0.52,
+        "pedestrian_exposure": 0.69,
+        "connectivity_potential": 0.41,
+        "feasibility": 0.64,
+        "land_use": "sidewalk"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85570000000001,
+              18.5184
+            ],
+            [
+              73.85670000000002,
+              18.5184
+            ],
+            [
+              73.85670000000002,
+              18.5194
+            ],
+            [
+              73.85570000000001,
+              18.5194
+            ],
+            [
+              73.85570000000001,
+              18.5184
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "D05",
+        "row": 3,
+        "col": 4,
+        "heat_score": 0.75,
+        "vegetation_deficit": 0.36,
+        "pedestrian_exposure": 0.38,
+        "connectivity_potential": 0.39,
+        "feasibility": 0.77,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8567,
+              18.5184
+            ],
+            [
+              73.85770000000001,
+              18.5184
+            ],
+            [
+              73.85770000000001,
+              18.5194
+            ],
+            [
+              73.8567,
+              18.5194
+            ],
+            [
+              73.8567,
+              18.5184
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "D06",
+        "row": 3,
+        "col": 5,
+        "heat_score": 0.75,
+        "vegetation_deficit": 0.28,
+        "pedestrian_exposure": 0.26,
+        "connectivity_potential": 0.41,
+        "feasibility": 0.0,
+        "land_use": "building"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85770000000001,
+              18.5184
+            ],
+            [
+              73.85870000000001,
+              18.5184
+            ],
+            [
+              73.85870000000001,
+              18.5194
+            ],
+            [
+              73.85770000000001,
+              18.5194
+            ],
+            [
+              73.85770000000001,
+              18.5184
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "D07",
+        "row": 3,
+        "col": 6,
+        "heat_score": 0.72,
+        "vegetation_deficit": 0.35,
+        "pedestrian_exposure": 0.38,
+        "connectivity_potential": 0.46,
+        "feasibility": 0.67,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85870000000001,
+              18.5184
+            ],
+            [
+              73.85970000000002,
+              18.5184
+            ],
+            [
+              73.85970000000002,
+              18.5194
+            ],
+            [
+              73.85870000000001,
+              18.5194
+            ],
+            [
+              73.85870000000001,
+              18.5184
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "D08",
+        "row": 3,
+        "col": 7,
+        "heat_score": 0.68,
+        "vegetation_deficit": 0.47,
+        "pedestrian_exposure": 0.63,
+        "connectivity_potential": 0.49,
+        "feasibility": 0.98,
+        "land_use": "sidewalk"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8597,
+              18.5184
+            ],
+            [
+              73.86070000000001,
+              18.5184
+            ],
+            [
+              73.86070000000001,
+              18.5194
+            ],
+            [
+              73.8597,
+              18.5194
+            ],
+            [
+              73.8597,
+              18.5184
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "D09",
+        "row": 3,
+        "col": 8,
+        "heat_score": 0.62,
+        "vegetation_deficit": 0.49,
+        "pedestrian_exposure": 0.42,
+        "connectivity_potential": 0.52,
+        "feasibility": 0.81,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.86070000000001,
+              18.5184
+            ],
+            [
+              73.86170000000001,
+              18.5184
+            ],
+            [
+              73.86170000000001,
+              18.5194
+            ],
+            [
+              73.86070000000001,
+              18.5194
+            ],
+            [
+              73.86070000000001,
+              18.5184
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "D10",
+        "row": 3,
+        "col": 9,
+        "heat_score": 0.53,
+        "vegetation_deficit": 0.56,
+        "pedestrian_exposure": 0.52,
+        "connectivity_potential": 0.55,
+        "feasibility": 0.62,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85170000000001,
+              18.5194
+            ],
+            [
+              73.85270000000001,
+              18.5194
+            ],
+            [
+              73.85270000000001,
+              18.520400000000002
+            ],
+            [
+              73.85170000000001,
+              18.520400000000002
+            ],
+            [
+              73.85170000000001,
+              18.5194
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "E01",
+        "row": 4,
+        "col": 0,
+        "heat_score": 0.88,
+        "vegetation_deficit": 0.88,
+        "pedestrian_exposure": 0.26,
+        "connectivity_potential": 0.81,
+        "feasibility": 0.7,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85270000000001,
+              18.5194
+            ],
+            [
+              73.85370000000002,
+              18.5194
+            ],
+            [
+              73.85370000000002,
+              18.520400000000002
+            ],
+            [
+              73.85270000000001,
+              18.520400000000002
+            ],
+            [
+              73.85270000000001,
+              18.5194
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "E02",
+        "row": 4,
+        "col": 1,
+        "heat_score": 0.83,
+        "vegetation_deficit": 0.65,
+        "pedestrian_exposure": 0.34,
+        "connectivity_potential": 0.62,
+        "feasibility": 0.94,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8537,
+              18.5194
+            ],
+            [
+              73.85470000000001,
+              18.5194
+            ],
+            [
+              73.85470000000001,
+              18.520400000000002
+            ],
+            [
+              73.8537,
+              18.520400000000002
+            ],
+            [
+              73.8537,
+              18.5194
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "E03",
+        "row": 4,
+        "col": 2,
+        "heat_score": 0.81,
+        "vegetation_deficit": 0.33,
+        "pedestrian_exposure": 0.42,
+        "connectivity_potential": 0.77,
+        "feasibility": 0.84,
+        "land_use": "green_space"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85470000000001,
+              18.5194
+            ],
+            [
+              73.85570000000001,
+              18.5194
+            ],
+            [
+              73.85570000000001,
+              18.520400000000002
+            ],
+            [
+              73.85470000000001,
+              18.520400000000002
+            ],
+            [
+              73.85470000000001,
+              18.5194
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "E04",
+        "row": 4,
+        "col": 3,
+        "heat_score": 0.82,
+        "vegetation_deficit": 0.53,
+        "pedestrian_exposure": 0.47,
+        "connectivity_potential": 0.39,
+        "feasibility": 0.92,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85570000000001,
+              18.5194
+            ],
+            [
+              73.85670000000002,
+              18.5194
+            ],
+            [
+              73.85670000000002,
+              18.520400000000002
+            ],
+            [
+              73.85570000000001,
+              18.520400000000002
+            ],
+            [
+              73.85570000000001,
+              18.5194
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "E05",
+        "row": 4,
+        "col": 4,
+        "heat_score": 0.84,
+        "vegetation_deficit": 0.36,
+        "pedestrian_exposure": 0.71,
+        "connectivity_potential": 0.36,
+        "feasibility": 0.93,
+        "land_use": "plaza"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8567,
+              18.5194
+            ],
+            [
+              73.85770000000001,
+              18.5194
+            ],
+            [
+              73.85770000000001,
+              18.520400000000002
+            ],
+            [
+              73.8567,
+              18.520400000000002
+            ],
+            [
+              73.8567,
+              18.5194
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "E06",
+        "row": 4,
+        "col": 5,
+        "heat_score": 0.82,
+        "vegetation_deficit": 0.25,
+        "pedestrian_exposure": 0.66,
+        "connectivity_potential": 0.38,
+        "feasibility": 1.0,
+        "land_use": "plaza"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85770000000001,
+              18.5194
+            ],
+            [
+              73.85870000000001,
+              18.5194
+            ],
+            [
+              73.85870000000001,
+              18.520400000000002
+            ],
+            [
+              73.85770000000001,
+              18.520400000000002
+            ],
+            [
+              73.85770000000001,
+              18.5194
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "E07",
+        "row": 4,
+        "col": 6,
+        "heat_score": 0.75,
+        "vegetation_deficit": 0.27,
+        "pedestrian_exposure": 0.58,
+        "connectivity_potential": 0.4,
+        "feasibility": 0.92,
+        "land_use": "plaza"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85870000000001,
+              18.5194
+            ],
+            [
+              73.85970000000002,
+              18.5194
+            ],
+            [
+              73.85970000000002,
+              18.520400000000002
+            ],
+            [
+              73.85870000000001,
+              18.520400000000002
+            ],
+            [
+              73.85870000000001,
+              18.5194
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "E08",
+        "row": 4,
+        "col": 7,
+        "heat_score": 0.67,
+        "vegetation_deficit": 0.33,
+        "pedestrian_exposure": 0.21,
+        "connectivity_potential": 0.41,
+        "feasibility": 0.0,
+        "land_use": "building"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8597,
+              18.5194
+            ],
+            [
+              73.86070000000001,
+              18.5194
+            ],
+            [
+              73.86070000000001,
+              18.520400000000002
+            ],
+            [
+              73.8597,
+              18.520400000000002
+            ],
+            [
+              73.8597,
+              18.5194
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "E09",
+        "row": 4,
+        "col": 8,
+        "heat_score": 0.59,
+        "vegetation_deficit": 0.28,
+        "pedestrian_exposure": 0.37,
+        "connectivity_potential": 0.43,
+        "feasibility": 0.98,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.86070000000001,
+              18.5194
+            ],
+            [
+              73.86170000000001,
+              18.5194
+            ],
+            [
+              73.86170000000001,
+              18.520400000000002
+            ],
+            [
+              73.86070000000001,
+              18.520400000000002
+            ],
+            [
+              73.86070000000001,
+              18.5194
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "E10",
+        "row": 4,
+        "col": 9,
+        "heat_score": 0.5,
+        "vegetation_deficit": 0.33,
+        "pedestrian_exposure": 0.45,
+        "connectivity_potential": 0.46,
+        "feasibility": 0.96,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85170000000001,
+              18.5204
+            ],
+            [
+              73.85270000000001,
+              18.5204
+            ],
+            [
+              73.85270000000001,
+              18.5214
+            ],
+            [
+              73.85170000000001,
+              18.5214
+            ],
+            [
+              73.85170000000001,
+              18.5204
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "F01",
+        "row": 5,
+        "col": 0,
+        "heat_score": 0.86,
+        "vegetation_deficit": 0.93,
+        "pedestrian_exposure": 0.45,
+        "connectivity_potential": 0.76,
+        "feasibility": 0.85,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85270000000001,
+              18.5204
+            ],
+            [
+              73.85370000000002,
+              18.5204
+            ],
+            [
+              73.85370000000002,
+              18.5214
+            ],
+            [
+              73.85270000000001,
+              18.5214
+            ],
+            [
+              73.85270000000001,
+              18.5204
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "F02",
+        "row": 5,
+        "col": 1,
+        "heat_score": 0.86,
+        "vegetation_deficit": 0.7,
+        "pedestrian_exposure": 0.44,
+        "connectivity_potential": 0.59,
+        "feasibility": 0.89,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8537,
+              18.5204
+            ],
+            [
+              73.85470000000001,
+              18.5204
+            ],
+            [
+              73.85470000000001,
+              18.5214
+            ],
+            [
+              73.8537,
+              18.5214
+            ],
+            [
+              73.8537,
+              18.5204
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "F03",
+        "row": 5,
+        "col": 2,
+        "heat_score": 0.88,
+        "vegetation_deficit": 0.66,
+        "pedestrian_exposure": 0.66,
+        "connectivity_potential": 0.44,
+        "feasibility": 0.8,
+        "land_use": "sidewalk"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85470000000001,
+              18.5204
+            ],
+            [
+              73.85570000000001,
+              18.5204
+            ],
+            [
+              73.85570000000001,
+              18.5214
+            ],
+            [
+              73.85470000000001,
+              18.5214
+            ],
+            [
+              73.85470000000001,
+              18.5204
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "F04",
+        "row": 5,
+        "col": 3,
+        "heat_score": 0.92,
+        "vegetation_deficit": 0.56,
+        "pedestrian_exposure": 0.47,
+        "connectivity_potential": 0.35,
+        "feasibility": 0.93,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85570000000001,
+              18.5204
+            ],
+            [
+              73.85670000000002,
+              18.5204
+            ],
+            [
+              73.85670000000002,
+              18.5214
+            ],
+            [
+              73.85570000000001,
+              18.5214
+            ],
+            [
+              73.85570000000001,
+              18.5204
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "F05",
+        "row": 5,
+        "col": 4,
+        "heat_score": 0.94,
+        "vegetation_deficit": 0.39,
+        "pedestrian_exposure": 0.8,
+        "connectivity_potential": 0.31,
+        "feasibility": 0.91,
+        "land_use": "plaza"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8567,
+              18.5204
+            ],
+            [
+              73.85770000000001,
+              18.5204
+            ],
+            [
+              73.85770000000001,
+              18.5214
+            ],
+            [
+              73.8567,
+              18.5214
+            ],
+            [
+              73.8567,
+              18.5204
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "F06",
+        "row": 5,
+        "col": 5,
+        "heat_score": 0.92,
+        "vegetation_deficit": 0.24,
+        "pedestrian_exposure": 0.75,
+        "connectivity_potential": 0.31,
+        "feasibility": 0.98,
+        "land_use": "plaza"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85770000000001,
+              18.5204
+            ],
+            [
+              73.85870000000001,
+              18.5204
+            ],
+            [
+              73.85870000000001,
+              18.5214
+            ],
+            [
+              73.85770000000001,
+              18.5214
+            ],
+            [
+              73.85770000000001,
+              18.5204
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "F07",
+        "row": 5,
+        "col": 6,
+        "heat_score": 0.78,
+        "vegetation_deficit": 0.2,
+        "pedestrian_exposure": 0.62,
+        "connectivity_potential": 0.33,
+        "feasibility": 0.95,
+        "land_use": "plaza"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85870000000001,
+              18.5204
+            ],
+            [
+              73.85970000000002,
+              18.5204
+            ],
+            [
+              73.85970000000002,
+              18.5214
+            ],
+            [
+              73.85870000000001,
+              18.5214
+            ],
+            [
+              73.85870000000001,
+              18.5204
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "F08",
+        "row": 5,
+        "col": 7,
+        "heat_score": 0.64,
+        "vegetation_deficit": 0.2,
+        "pedestrian_exposure": 0.31,
+        "connectivity_potential": 0.34,
+        "feasibility": 0.79,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8597,
+              18.5204
+            ],
+            [
+              73.86070000000001,
+              18.5204
+            ],
+            [
+              73.86070000000001,
+              18.5214
+            ],
+            [
+              73.8597,
+              18.5214
+            ],
+            [
+              73.8597,
+              18.5204
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "F09",
+        "row": 5,
+        "col": 8,
+        "heat_score": 0.52,
+        "vegetation_deficit": 0.0,
+        "pedestrian_exposure": 0.34,
+        "connectivity_potential": 0.68,
+        "feasibility": 0.78,
+        "land_use": "green_space"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.86070000000001,
+              18.5204
+            ],
+            [
+              73.86170000000001,
+              18.5204
+            ],
+            [
+              73.86170000000001,
+              18.5214
+            ],
+            [
+              73.86070000000001,
+              18.5214
+            ],
+            [
+              73.86070000000001,
+              18.5204
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "F10",
+        "row": 5,
+        "col": 9,
+        "heat_score": 0.41,
+        "vegetation_deficit": 0.2,
+        "pedestrian_exposure": 0.37,
+        "connectivity_potential": 0.44,
+        "feasibility": 0.7,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85170000000001,
+              18.5214
+            ],
+            [
+              73.85270000000001,
+              18.5214
+            ],
+            [
+              73.85270000000001,
+              18.5224
+            ],
+            [
+              73.85170000000001,
+              18.5224
+            ],
+            [
+              73.85170000000001,
+              18.5214
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "G01",
+        "row": 6,
+        "col": 0,
+        "heat_score": 0.82,
+        "vegetation_deficit": 0.99,
+        "pedestrian_exposure": 0.65,
+        "connectivity_potential": 0.74,
+        "feasibility": 0.86,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85270000000001,
+              18.5214
+            ],
+            [
+              73.85370000000002,
+              18.5214
+            ],
+            [
+              73.85370000000002,
+              18.5224
+            ],
+            [
+              73.85270000000001,
+              18.5224
+            ],
+            [
+              73.85270000000001,
+              18.5214
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "G02",
+        "row": 6,
+        "col": 1,
+        "heat_score": 0.87,
+        "vegetation_deficit": 0.45,
+        "pedestrian_exposure": 0.54,
+        "connectivity_potential": 0.87,
+        "feasibility": 0.93,
+        "land_use": "green_space"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8537,
+              18.5214
+            ],
+            [
+              73.85470000000001,
+              18.5214
+            ],
+            [
+              73.85470000000001,
+              18.5224
+            ],
+            [
+              73.8537,
+              18.5224
+            ],
+            [
+              73.8537,
+              18.5214
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "G03",
+        "row": 6,
+        "col": 2,
+        "heat_score": 0.93,
+        "vegetation_deficit": 0.71,
+        "pedestrian_exposure": 0.33,
+        "connectivity_potential": 0.42,
+        "feasibility": 0.0,
+        "land_use": "building"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85470000000001,
+              18.5214
+            ],
+            [
+              73.85570000000001,
+              18.5214
+            ],
+            [
+              73.85570000000001,
+              18.5224
+            ],
+            [
+              73.85470000000001,
+              18.5224
+            ],
+            [
+              73.85470000000001,
+              18.5214
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "G04",
+        "row": 6,
+        "col": 3,
+        "heat_score": 0.98,
+        "vegetation_deficit": 0.62,
+        "pedestrian_exposure": 0.44,
+        "connectivity_potential": 0.3,
+        "feasibility": 0.81,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85570000000001,
+              18.5214
+            ],
+            [
+              73.85670000000002,
+              18.5214
+            ],
+            [
+              73.85670000000002,
+              18.5224
+            ],
+            [
+              73.85570000000001,
+              18.5224
+            ],
+            [
+              73.85570000000001,
+              18.5214
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "G05",
+        "row": 6,
+        "col": 4,
+        "heat_score": 0.99,
+        "vegetation_deficit": 0.46,
+        "pedestrian_exposure": 0.75,
+        "connectivity_potential": 0.24,
+        "feasibility": 0.93,
+        "land_use": "plaza"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8567,
+              18.5214
+            ],
+            [
+              73.85770000000001,
+              18.5214
+            ],
+            [
+              73.85770000000001,
+              18.5224
+            ],
+            [
+              73.8567,
+              18.5224
+            ],
+            [
+              73.8567,
+              18.5214
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "G06",
+        "row": 6,
+        "col": 5,
+        "heat_score": 0.93,
+        "vegetation_deficit": 0.28,
+        "pedestrian_exposure": 0.72,
+        "connectivity_potential": 0.22,
+        "feasibility": 0.85,
+        "land_use": "plaza"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85770000000001,
+              18.5214
+            ],
+            [
+              73.85870000000001,
+              18.5214
+            ],
+            [
+              73.85870000000001,
+              18.5224
+            ],
+            [
+              73.85770000000001,
+              18.5224
+            ],
+            [
+              73.85770000000001,
+              18.5214
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "G07",
+        "row": 6,
+        "col": 6,
+        "heat_score": 0.81,
+        "vegetation_deficit": 0.2,
+        "pedestrian_exposure": 0.64,
+        "connectivity_potential": 0.25,
+        "feasibility": 0.82,
+        "land_use": "plaza"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85870000000001,
+              18.5214
+            ],
+            [
+              73.85970000000002,
+              18.5214
+            ],
+            [
+              73.85970000000002,
+              18.5224
+            ],
+            [
+              73.85870000000001,
+              18.5224
+            ],
+            [
+              73.85870000000001,
+              18.5214
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "G08",
+        "row": 6,
+        "col": 7,
+        "heat_score": 0.64,
+        "vegetation_deficit": 0.16,
+        "pedestrian_exposure": 0.34,
+        "connectivity_potential": 0.3,
+        "feasibility": 0.71,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8597,
+              18.5214
+            ],
+            [
+              73.86070000000001,
+              18.5214
+            ],
+            [
+              73.86070000000001,
+              18.5224
+            ],
+            [
+              73.8597,
+              18.5224
+            ],
+            [
+              73.8597,
+              18.5214
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "G09",
+        "row": 6,
+        "col": 8,
+        "heat_score": 0.48,
+        "vegetation_deficit": 0.1,
+        "pedestrian_exposure": 0.55,
+        "connectivity_potential": 0.38,
+        "feasibility": 0.71,
+        "land_use": "sidewalk"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.86070000000001,
+              18.5214
+            ],
+            [
+              73.86170000000001,
+              18.5214
+            ],
+            [
+              73.86170000000001,
+              18.5224
+            ],
+            [
+              73.86070000000001,
+              18.5224
+            ],
+            [
+              73.86070000000001,
+              18.5214
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "G10",
+        "row": 6,
+        "col": 9,
+        "heat_score": 0.35,
+        "vegetation_deficit": 0.23,
+        "pedestrian_exposure": 0.27,
+        "connectivity_potential": 0.47,
+        "feasibility": 0.73,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85170000000001,
+              18.5224
+            ],
+            [
+              73.85270000000001,
+              18.5224
+            ],
+            [
+              73.85270000000001,
+              18.523400000000002
+            ],
+            [
+              73.85170000000001,
+              18.523400000000002
+            ],
+            [
+              73.85170000000001,
+              18.5224
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "H01",
+        "row": 7,
+        "col": 0,
+        "heat_score": 0.71,
+        "vegetation_deficit": 1.0,
+        "pedestrian_exposure": 0.64,
+        "connectivity_potential": 0.72,
+        "feasibility": 0.82,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85270000000001,
+              18.5224
+            ],
+            [
+              73.85370000000002,
+              18.5224
+            ],
+            [
+              73.85370000000002,
+              18.523400000000002
+            ],
+            [
+              73.85270000000001,
+              18.523400000000002
+            ],
+            [
+              73.85270000000001,
+              18.5224
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "H02",
+        "row": 7,
+        "col": 1,
+        "heat_score": 0.81,
+        "vegetation_deficit": 0.78,
+        "pedestrian_exposure": 0.53,
+        "connectivity_potential": 0.54,
+        "feasibility": 0.66,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8537,
+              18.5224
+            ],
+            [
+              73.85470000000001,
+              18.5224
+            ],
+            [
+              73.85470000000001,
+              18.523400000000002
+            ],
+            [
+              73.8537,
+              18.523400000000002
+            ],
+            [
+              73.8537,
+              18.5224
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "H03",
+        "row": 7,
+        "col": 2,
+        "heat_score": 0.91,
+        "vegetation_deficit": 0.74,
+        "pedestrian_exposure": 0.44,
+        "connectivity_potential": 0.37,
+        "feasibility": 0.69,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85470000000001,
+              18.5224
+            ],
+            [
+              73.85570000000001,
+              18.5224
+            ],
+            [
+              73.85570000000001,
+              18.523400000000002
+            ],
+            [
+              73.85470000000001,
+              18.523400000000002
+            ],
+            [
+              73.85470000000001,
+              18.5224
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "H04",
+        "row": 7,
+        "col": 3,
+        "heat_score": 0.96,
+        "vegetation_deficit": 0.37,
+        "pedestrian_exposure": 0.41,
+        "connectivity_potential": 0.53,
+        "feasibility": 0.91,
+        "land_use": "green_space"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85570000000001,
+              18.5224
+            ],
+            [
+              73.85670000000002,
+              18.5224
+            ],
+            [
+              73.85670000000002,
+              18.523400000000002
+            ],
+            [
+              73.85570000000001,
+              18.523400000000002
+            ],
+            [
+              73.85570000000001,
+              18.5224
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "H05",
+        "row": 7,
+        "col": 4,
+        "heat_score": 0.97,
+        "vegetation_deficit": 0.54,
+        "pedestrian_exposure": 0.41,
+        "connectivity_potential": 0.15,
+        "feasibility": 0.88,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8567,
+              18.5224
+            ],
+            [
+              73.85770000000001,
+              18.5224
+            ],
+            [
+              73.85770000000001,
+              18.523400000000002
+            ],
+            [
+              73.8567,
+              18.523400000000002
+            ],
+            [
+              73.8567,
+              18.5224
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "H06",
+        "row": 7,
+        "col": 5,
+        "heat_score": 0.93,
+        "vegetation_deficit": 0.38,
+        "pedestrian_exposure": 0.39,
+        "connectivity_potential": 0.13,
+        "feasibility": 0.63,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85770000000001,
+              18.5224
+            ],
+            [
+              73.85870000000001,
+              18.5224
+            ],
+            [
+              73.85870000000001,
+              18.523400000000002
+            ],
+            [
+              73.85770000000001,
+              18.523400000000002
+            ],
+            [
+              73.85770000000001,
+              18.5224
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "H07",
+        "row": 7,
+        "col": 6,
+        "heat_score": 0.85,
+        "vegetation_deficit": 0.27,
+        "pedestrian_exposure": 0.58,
+        "connectivity_potential": 0.18,
+        "feasibility": 0.76,
+        "land_use": "sidewalk"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85870000000001,
+              18.5224
+            ],
+            [
+              73.85970000000002,
+              18.5224
+            ],
+            [
+              73.85970000000002,
+              18.523400000000002
+            ],
+            [
+              73.85870000000001,
+              18.523400000000002
+            ],
+            [
+              73.85870000000001,
+              18.5224
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "H08",
+        "row": 7,
+        "col": 7,
+        "heat_score": 0.71,
+        "vegetation_deficit": 0.0,
+        "pedestrian_exposure": 0.26,
+        "connectivity_potential": 0.57,
+        "feasibility": 0.86,
+        "land_use": "green_space"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8597,
+              18.5224
+            ],
+            [
+              73.86070000000001,
+              18.5224
+            ],
+            [
+              73.86070000000001,
+              18.523400000000002
+            ],
+            [
+              73.8597,
+              18.523400000000002
+            ],
+            [
+              73.8597,
+              18.5224
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "H09",
+        "row": 7,
+        "col": 8,
+        "heat_score": 0.56,
+        "vegetation_deficit": 0.23,
+        "pedestrian_exposure": 0.13,
+        "connectivity_potential": 0.38,
+        "feasibility": 0.0,
+        "land_use": "building"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.86070000000001,
+              18.5224
+            ],
+            [
+              73.86170000000001,
+              18.5224
+            ],
+            [
+              73.86170000000001,
+              18.523400000000002
+            ],
+            [
+              73.86070000000001,
+              18.523400000000002
+            ],
+            [
+              73.86070000000001,
+              18.5224
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "H10",
+        "row": 7,
+        "col": 9,
+        "heat_score": 0.41,
+        "vegetation_deficit": 0.45,
+        "pedestrian_exposure": 0.23,
+        "connectivity_potential": 0.5,
+        "feasibility": 0.77,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85170000000001,
+              18.5234
+            ],
+            [
+              73.85270000000001,
+              18.5234
+            ],
+            [
+              73.85270000000001,
+              18.5244
+            ],
+            [
+              73.85170000000001,
+              18.5244
+            ],
+            [
+              73.85170000000001,
+              18.5234
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "I01",
+        "row": 8,
+        "col": 0,
+        "heat_score": 0.55,
+        "vegetation_deficit": 0.95,
+        "pedestrian_exposure": 0.4,
+        "connectivity_potential": 0.74,
+        "feasibility": 0.68,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85270000000001,
+              18.5234
+            ],
+            [
+              73.85370000000002,
+              18.5234
+            ],
+            [
+              73.85370000000002,
+              18.5244
+            ],
+            [
+              73.85270000000001,
+              18.5244
+            ],
+            [
+              73.85270000000001,
+              18.5234
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "I02",
+        "row": 8,
+        "col": 1,
+        "heat_score": 0.68,
+        "vegetation_deficit": 0.71,
+        "pedestrian_exposure": 0.32,
+        "connectivity_potential": 0.54,
+        "feasibility": 0.0,
+        "land_use": "building"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8537,
+              18.5234
+            ],
+            [
+              73.85470000000001,
+              18.5234
+            ],
+            [
+              73.85470000000001,
+              18.5244
+            ],
+            [
+              73.8537,
+              18.5244
+            ],
+            [
+              73.8537,
+              18.5234
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "I03",
+        "row": 8,
+        "col": 2,
+        "heat_score": 0.81,
+        "vegetation_deficit": 0.7,
+        "pedestrian_exposure": 0.42,
+        "connectivity_potential": 0.33,
+        "feasibility": 0.77,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85470000000001,
+              18.5234
+            ],
+            [
+              73.85570000000001,
+              18.5234
+            ],
+            [
+              73.85570000000001,
+              18.5244
+            ],
+            [
+              73.85470000000001,
+              18.5244
+            ],
+            [
+              73.85470000000001,
+              18.5234
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "I04",
+        "row": 8,
+        "col": 3,
+        "heat_score": 0.86,
+        "vegetation_deficit": 0.69,
+        "pedestrian_exposure": 0.65,
+        "connectivity_potential": 0.17,
+        "feasibility": 0.96,
+        "land_use": "sidewalk"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85570000000001,
+              18.5234
+            ],
+            [
+              73.85670000000002,
+              18.5234
+            ],
+            [
+              73.85670000000002,
+              18.5244
+            ],
+            [
+              73.85570000000001,
+              18.5244
+            ],
+            [
+              73.85570000000001,
+              18.5234
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "I05",
+        "row": 8,
+        "col": 4,
+        "heat_score": 0.88,
+        "vegetation_deficit": 0.63,
+        "pedestrian_exposure": 0.41,
+        "connectivity_potential": 0.06,
+        "feasibility": 0.83,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8567,
+              18.5234
+            ],
+            [
+              73.85770000000001,
+              18.5234
+            ],
+            [
+              73.85770000000001,
+              18.5244
+            ],
+            [
+              73.8567,
+              18.5244
+            ],
+            [
+              73.8567,
+              18.5234
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "I06",
+        "row": 8,
+        "col": 5,
+        "heat_score": 0.9,
+        "vegetation_deficit": 0.51,
+        "pedestrian_exposure": 0.29,
+        "connectivity_potential": 0.05,
+        "feasibility": 0.0,
+        "land_use": "building"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85770000000001,
+              18.5234
+            ],
+            [
+              73.85870000000001,
+              18.5234
+            ],
+            [
+              73.85870000000001,
+              18.5244
+            ],
+            [
+              73.85770000000001,
+              18.5244
+            ],
+            [
+              73.85770000000001,
+              18.5234
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "I07",
+        "row": 8,
+        "col": 6,
+        "heat_score": 0.9,
+        "vegetation_deficit": 0.41,
+        "pedestrian_exposure": 0.27,
+        "connectivity_potential": 0.13,
+        "feasibility": 0.88,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85870000000001,
+              18.5234
+            ],
+            [
+              73.85970000000002,
+              18.5234
+            ],
+            [
+              73.85970000000002,
+              18.5244
+            ],
+            [
+              73.85870000000001,
+              18.5244
+            ],
+            [
+              73.85870000000001,
+              18.5234
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "I08",
+        "row": 8,
+        "col": 7,
+        "heat_score": 0.85,
+        "vegetation_deficit": 0.39,
+        "pedestrian_exposure": 0.13,
+        "connectivity_potential": 0.25,
+        "feasibility": 0.94,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8597,
+              18.5234
+            ],
+            [
+              73.86070000000001,
+              18.5234
+            ],
+            [
+              73.86070000000001,
+              18.5244
+            ],
+            [
+              73.8597,
+              18.5244
+            ],
+            [
+              73.8597,
+              18.5234
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "I09",
+        "row": 8,
+        "col": 8,
+        "heat_score": 0.75,
+        "vegetation_deficit": 0.47,
+        "pedestrian_exposure": 0.14,
+        "connectivity_potential": 0.39,
+        "feasibility": 0.91,
+        "land_use": "open_land"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.86070000000001,
+              18.5234
+            ],
+            [
+              73.86170000000001,
+              18.5234
+            ],
+            [
+              73.86170000000001,
+              18.5244
+            ],
+            [
+              73.86070000000001,
+              18.5244
+            ],
+            [
+              73.86070000000001,
+              18.5234
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "I10",
+        "row": 8,
+        "col": 9,
+        "heat_score": 0.63,
+        "vegetation_deficit": 0.78,
+        "pedestrian_exposure": 0.29,
+        "connectivity_potential": 0.51,
+        "feasibility": 0.75,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85170000000001,
+              18.5244
+            ],
+            [
+              73.85270000000001,
+              18.5244
+            ],
+            [
+              73.85270000000001,
+              18.5254
+            ],
+            [
+              73.85170000000001,
+              18.5254
+            ],
+            [
+              73.85170000000001,
+              18.5244
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "J01",
+        "row": 9,
+        "col": 0,
+        "heat_score": 0.38,
+        "vegetation_deficit": 0.74,
+        "pedestrian_exposure": 0.1,
+        "connectivity_potential": 0.79,
+        "feasibility": 0.6,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85270000000001,
+              18.5244
+            ],
+            [
+              73.85370000000002,
+              18.5244
+            ],
+            [
+              73.85370000000002,
+              18.5254
+            ],
+            [
+              73.85270000000001,
+              18.5254
+            ],
+            [
+              73.85270000000001,
+              18.5244
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "J02",
+        "row": 9,
+        "col": 1,
+        "heat_score": 0.57,
+        "vegetation_deficit": 0.73,
+        "pedestrian_exposure": 0.32,
+        "connectivity_potential": 0.56,
+        "feasibility": 0.74,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8537,
+              18.5244
+            ],
+            [
+              73.85470000000001,
+              18.5244
+            ],
+            [
+              73.85470000000001,
+              18.5254
+            ],
+            [
+              73.8537,
+              18.5254
+            ],
+            [
+              73.8537,
+              18.5244
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "J03",
+        "row": 9,
+        "col": 2,
+        "heat_score": 0.68,
+        "vegetation_deficit": 0.8,
+        "pedestrian_exposure": 0.41,
+        "connectivity_potential": 0.31,
+        "feasibility": 0.9,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85470000000001,
+              18.5244
+            ],
+            [
+              73.85570000000001,
+              18.5244
+            ],
+            [
+              73.85570000000001,
+              18.5254
+            ],
+            [
+              73.85470000000001,
+              18.5254
+            ],
+            [
+              73.85470000000001,
+              18.5244
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "J04",
+        "row": 9,
+        "col": 3,
+        "heat_score": 0.73,
+        "vegetation_deficit": 0.9,
+        "pedestrian_exposure": 0.41,
+        "connectivity_potential": 0.11,
+        "feasibility": 0.94,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85570000000001,
+              18.5244
+            ],
+            [
+              73.85670000000002,
+              18.5244
+            ],
+            [
+              73.85670000000002,
+              18.5254
+            ],
+            [
+              73.85570000000001,
+              18.5254
+            ],
+            [
+              73.85570000000001,
+              18.5244
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "J05",
+        "row": 9,
+        "col": 4,
+        "heat_score": 0.76,
+        "vegetation_deficit": 0.92,
+        "pedestrian_exposure": 0.45,
+        "connectivity_potential": 0.0,
+        "feasibility": 0.98,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8567,
+              18.5244
+            ],
+            [
+              73.85770000000001,
+              18.5244
+            ],
+            [
+              73.85770000000001,
+              18.5254
+            ],
+            [
+              73.8567,
+              18.5254
+            ],
+            [
+              73.8567,
+              18.5244
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "J06",
+        "row": 9,
+        "col": 5,
+        "heat_score": 0.85,
+        "vegetation_deficit": 0.87,
+        "pedestrian_exposure": 0.41,
+        "connectivity_potential": 0.0,
+        "feasibility": 0.77,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85770000000001,
+              18.5244
+            ],
+            [
+              73.85870000000001,
+              18.5244
+            ],
+            [
+              73.85870000000001,
+              18.5254
+            ],
+            [
+              73.85770000000001,
+              18.5254
+            ],
+            [
+              73.85770000000001,
+              18.5244
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "J07",
+        "row": 9,
+        "col": 6,
+        "heat_score": 0.95,
+        "vegetation_deficit": 0.77,
+        "pedestrian_exposure": 0.2,
+        "connectivity_potential": 0.1,
+        "feasibility": 0.9,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.85870000000001,
+              18.5244
+            ],
+            [
+              73.85970000000002,
+              18.5244
+            ],
+            [
+              73.85970000000002,
+              18.5254
+            ],
+            [
+              73.85870000000001,
+              18.5254
+            ],
+            [
+              73.85870000000001,
+              18.5244
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "J08",
+        "row": 9,
+        "col": 7,
+        "heat_score": 1.0,
+        "vegetation_deficit": 0.78,
+        "pedestrian_exposure": 0.0,
+        "connectivity_potential": 0.24,
+        "feasibility": 0.82,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.8597,
+              18.5244
+            ],
+            [
+              73.86070000000001,
+              18.5244
+            ],
+            [
+              73.86070000000001,
+              18.5254
+            ],
+            [
+              73.8597,
+              18.5254
+            ],
+            [
+              73.8597,
+              18.5244
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "J09",
+        "row": 9,
+        "col": 8,
+        "heat_score": 1.0,
+        "vegetation_deficit": 0.94,
+        "pedestrian_exposure": 0.1,
+        "connectivity_potential": 0.37,
+        "feasibility": 0.84,
+        "land_use": "roadside"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.86070000000001,
+              18.5244
+            ],
+            [
+              73.86170000000001,
+              18.5244
+            ],
+            [
+              73.86170000000001,
+              18.5254
+            ],
+            [
+              73.86070000000001,
+              18.5254
+            ],
+            [
+              73.86070000000001,
+              18.5244
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "J10",
+        "row": 9,
+        "col": 9,
+        "heat_score": 0.99,
+        "vegetation_deficit": 1.0,
+        "pedestrian_exposure": 0.44,
+        "connectivity_potential": 0.46,
+        "feasibility": 0.69,
+        "land_use": "roadside"
+      }
+    }
+  ]
+}

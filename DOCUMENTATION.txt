@@ -1,0 +1,315 @@
+================================================================================
+                            EcoGrid AI — System Documentation
+                         Smart Urban Green Intervention Planner
+================================================================================
+
+
+1. WHAT IS ECOGRID AI?
+--------------------------------------------------------------------------------
+
+EcoGrid AI is a budget-aware recommendation engine for urban climate
+interventions. Unlike traditional heat maps or green cover maps that only show
+WHERE a problem exists, EcoGrid AI tells planners WHAT to do about it — which
+specific intervention to place in which location, how much it costs, and WHY
+that choice was made.
+
+One-line pitch:
+  "Not just a heat map — a budget-aware recommendation engine that tells a
+   planner exactly which climate intervention to place in which grid cell,
+   and why, given limited money and space."
+
+
+2. THE PROBLEM IT SOLVES
+--------------------------------------------------------------------------------
+
+Cities and campuses face multiple overlapping environmental challenges:
+
+  - Heat stress:         Certain blocks trap heat (urban heat island effect)
+  - Vegetation deficit:  Some areas have little to no green cover
+  - Pedestrian exposure: People walking on hot sidewalks and plazas suffer
+  - Fragmented green:    Isolated green patches don't form ecological corridors
+
+These problems vary block by block. Planting trees everywhere isn't optimal —
+some spots need shade structures, some need reflective surfaces, and budgets
+are always limited. Planners need a tool that considers ALL these factors
+simultaneously and recommends the BEST combination of interventions across
+many locations at once.
+
+
+3. HOW THE SYSTEM WORKS (END-TO-END FLOW)
+--------------------------------------------------------------------------------
+
+Step 1: DIVIDE THE AREA INTO A GRID
+  - The system divides a geographic area (currently centered on Pune, India)
+    into a 10x10 grid of square cells, each roughly 111m x 111m.
+  - Each cell represents a specific block of land.
+
+Step 2: SCORE EACH CELL
+  For every cell, the system computes five environmental scores (all 0 to 1):
+
+  | Score                  | What it measures                              |
+  |------------------------|-----------------------------------------------|
+  | Heat Score             | How hot the area is (1 = extreme heat)        |
+  | Vegetation Deficit     | How much green cover is missing (1 = barren)  |
+  | Pedestrian Exposure    | How exposed walkers are to heat (1 = severe)  |
+  | Connectivity Potential | Proximity to existing green patches (1 = high)|
+  | Feasibility            | Whether intervention is physically possible    |
+  |                        | (0 = building footprint, can't build here)    |
+
+  Each cell also has a land_use type:
+    sidewalk, plaza, roadside, open_land, building, or green_space
+
+  Scores are spatially correlated — neighboring cells have similar values,
+  creating realistic heat islands and green corridors rather than random noise.
+
+Step 3: DEFINE AVAILABLE INTERVENTIONS
+  The system offers four types of climate interventions:
+
+  +---------------------+----------+------------------------------------------+
+  | Intervention        | Cost (₹) | What it does best                        |
+  +---------------------+----------+------------------------------------------+
+  | Native Trees        | 25,000   | Reduces heat, adds green cover,          |
+  |                     |          | connects green corridors                 |
+  +---------------------+----------+------------------------------------------+
+  | Pollinator Strip    | 12,000   | Maximizes green coverage and ecological  |
+  |                     |          | connectivity at lowest cost              |
+  +---------------------+----------+------------------------------------------+
+  | Shade Structure     | 45,000   | Best for pedestrian comfort, also        |
+  |                     |          | reduces heat (most expensive)            |
+  +---------------------+----------+------------------------------------------+
+  | Cool/Reflective     | 18,000   | Highest heat reduction, moderate         |
+  | Surface             |          | pedestrian benefit                       |
+  +---------------------+----------+------------------------------------------+
+
+  Each intervention has:
+    - A cost per unit
+    - A minimum feasibility score required (can't build on infeasible land)
+    - Compatible land_use types (e.g. pollinator strips need open_land/roadside)
+    - Benefit weights across 4 dimensions (how much it helps heat, green, etc.)
+
+Step 4: USER SETS PRIORITIES
+  The planner adjusts two controls:
+
+  a) BUDGET: How much total money is available (₹0 to ₹20,00,000)
+
+  b) PRIORITY WEIGHTS: How important each goal is (0 to 1 each):
+     - Heat Reduction
+     - Green Coverage
+     - Connectivity
+     - Pedestrian Comfort
+
+  Example: A planner focused on pedestrian safety might set:
+    Heat = 0.2, Green = 0.1, Connectivity = 0.1, Pedestrian = 0.6
+
+Step 5: OPTIMIZATION ENGINE RUNS
+  The system runs a greedy knapsack algorithm:
+
+  For every cell × every eligible intervention combination:
+
+    1. CHECK ELIGIBILITY:
+       - Is the cell's feasibility >= intervention's minimum? (skip buildings)
+       - Is the cell's land_use compatible? (can't plant trees on buildings)
+
+    2. COMPUTE BENEFIT SCORE:
+       benefit = Σ (user_weight[dim] × cell_score[dim] × intervention_benefit[dim])
+
+       This means: the benefit is highest when the USER cares about a dimension,
+       the CELL has a high problem score in that dimension, AND the INTERVENTION
+       is effective at addressing that dimension.
+
+       Example: A cell with heat_score=0.9 using Native Trees (heat benefit=0.8)
+       with user heat weight=0.5 contributes: 0.5 × 0.9 × 0.8 = 0.36 for heat.
+
+    3. COMPUTE VALUE-PER-COST:
+       value_per_cost = benefit_score / intervention_cost
+
+    4. SORT all (cell, intervention) pairs by value_per_cost, highest first.
+
+    5. GREEDILY ASSIGN: Walk down the sorted list. For each pair:
+       - Skip if this cell already has an intervention assigned
+       - Skip if adding this cost would exceed the budget
+       - Otherwise, assign this intervention to this cell
+
+  Result: The best possible set of interventions within budget, where "best"
+  means maximizing total weighted benefit across all selected cells.
+
+Step 6: DISPLAY RESULTS ON THE MAP
+  The map shows each cell colored by the assigned intervention:
+    - Green  = Native Trees
+    - Yellow = Pollinator Strip
+    - Orange = Shade Structure
+    - Blue   = Cool/Reflective Surface
+    - Gray   = No intervention (not selected or infeasible)
+
+Step 7: EXPLAIN EVERY RECOMMENDATION
+  Clicking any cell shows a detailed explainability panel:
+
+    WHAT:     Which intervention was assigned (or "none")
+    WHERE:    Cell ID and coordinates
+    HOW MUCH: Cost in rupees
+    WHY:      Human-readable reason based on the cell's highest-impact score
+              (e.g. "Cell has high heat intensity (0.92). Native Trees is
+              highly effective for this condition. Land use 'plaza' is
+              compatible; feasibility score 0.85.")
+    IMPACT:   Breakdown of expected benefit across all 4 dimensions
+
+  For cells NOT in the plan, clicking shows raw environmental scores so
+  the planner understands why that location wasn't selected.
+
+Step 8: ITERATE
+  The planner can change the budget or priority weights and hit "Re-optimize"
+  to instantly see how the plan changes. This enables rapid exploration:
+    - "What if I double the budget?"
+    - "What if I prioritize pedestrian comfort over green coverage?"
+    - "What's the minimum budget to cover the heat hotspots?"
+
+
+4. SYSTEM ARCHITECTURE
+--------------------------------------------------------------------------------
+
+  ┌─────────────────────┐
+  │  Grid Generator     │    Python script that creates synthetic geographic
+  │  (generate_grid.py) │    data with spatially correlated environmental
+  │                     │    scores using Gaussian-smoothed random noise.
+  └─────────┬───────────┘
+            │ produces grid.json (GeoJSON)
+            ▼
+  ┌─────────────────────┐
+  │  FastAPI Backend     │    REST API serving grid data, intervention catalog,
+  │  (main.py)          │    and optimization results. Runs on port 8000.
+  │                     │
+  │  Endpoints:         │    GET  /api/grid          → cell scores (GeoJSON)
+  │                     │    GET  /api/interventions  → intervention catalog
+  │                     │    POST /api/optimize       → run optimizer
+  │                     │    GET  /api/plan/:cell_id  → cell details
+  └─────────┬───────────┘
+            │ JSON API
+            ▼
+  ┌─────────────────────┐
+  │  React Frontend     │    Interactive map dashboard with:
+  │  + MapLibre GL JS   │    - Map with 5 toggleable color layers
+  │                     │    - Budget & priority sliders
+  │  Runs on port 5173  │    - Click-to-explain panel
+  │                     │    - Summary dashboard with charts
+  └─────────────────────┘
+
+
+5. DATA MODEL
+--------------------------------------------------------------------------------
+
+CELL (each grid square):
+  - cell_id:                 Human-readable ID (e.g. "A01", "E05")
+  - polygon:                 Geographic boundaries (GeoJSON polygon)
+  - heat_score:              0-1, how intense the heat is
+  - vegetation_deficit:      0-1, how much green cover is missing
+  - pedestrian_exposure:     0-1, how exposed pedestrians are
+  - connectivity_potential:  0-1, how close to existing green patches
+  - feasibility:             0-1, whether building is physically possible
+  - land_use:                Type of land (sidewalk/plaza/roadside/etc.)
+
+OPTIMIZATION REQUEST (from user):
+  - budget:                  Total available money in rupees
+  - weights:                 Priority for each of the 4 dimensions (0-1 each)
+
+OPTIMIZATION RESPONSE (per recommended cell):
+  - cell_id:                 Which cell
+  - intervention_id:         Which intervention type
+  - cost:                    How much this intervention costs
+  - score_gain:              Total weighted benefit achieved
+  - reason:                  Human-readable explanation
+  - impact_breakdown:        Benefit split across 4 dimensions
+
+
+6. WHAT MAKES THIS DIFFERENT FROM A HEAT MAP
+--------------------------------------------------------------------------------
+
+  Traditional Heat Map                    EcoGrid AI
+  ─────────────────────                   ──────────────────────
+  Shows WHERE it's hot                    Shows WHAT TO DO about it
+  Single dimension (temp)                 4 dimensions simultaneously
+  No budget awareness                     Optimizes under budget constraint
+  No actionable recommendations           Specific intervention per cell
+  No explanation                          Full explainability panel
+  Static visualization                    Interactive re-optimization
+  One-size-fits-all                       Adapts to planner priorities
+
+
+7. TECHNOLOGY STACK
+--------------------------------------------------------------------------------
+
+  Layer       Technology         Purpose
+  ──────────  ─────────────────  ──────────────────────────────────────
+  Frontend    React + TypeScript UI framework
+              MapLibre GL JS     Interactive map rendering
+              CSS (custom)       Styling with eco-themed design system
+  Backend     Python + FastAPI   REST API server
+              Greedy Optimizer   Knapsack-style budget allocation
+  Data        GeoJSON            Geographic data format
+              In-memory          No database needed (prototype)
+
+
+8. HOW TO RUN
+--------------------------------------------------------------------------------
+
+Prerequisites: Python 3.10+, Node.js 18+
+
+  Terminal 1 (Backend):
+    cd backend
+    pip install -r requirements.txt
+    python generate_grid.py              # generates grid.json (only first time)
+    python -m uvicorn main:app --port 8000
+
+  Terminal 2 (Frontend):
+    cd frontend
+    npm install                          # only first time
+    npm run dev
+
+  Open http://localhost:5173 in your browser.
+
+  No Docker, no API keys, no external paid services required.
+
+
+9. WHAT IS EXPLICITLY OUT OF SCOPE (PROTOTYPE BOUNDARIES)
+--------------------------------------------------------------------------------
+
+The following are NOT implemented and are NOT intended for this prototype:
+
+  - Real satellite imagery ingestion pipelines
+  - Live IoT sensor integration
+  - User authentication or multi-tenancy
+  - Multi-city production deployment
+  - Real ML model training on live geospatial datasets
+  - Real-time weather data feeds
+
+All environmental data is SYNTHETIC (generated to look plausible), not from
+real satellite processing. This is a demonstration of the decision-support
+logic, not a production geospatial platform.
+
+
+10. DEMO SCENARIOS (FOR HACKATHON JUDGES)
+--------------------------------------------------------------------------------
+
+Scenario A: "Heat Emergency Mode"
+  Set Heat weight to 1.0, all others to 0.0
+  → Watch the optimizer prioritize Cool Surfaces and Native Trees in the
+    hottest cells, ignoring connectivity and green coverage.
+
+Scenario B: "Ecological Corridor Builder"
+  Set Connectivity to 0.8, Green to 0.6, Heat and Pedestrian to 0.1
+  → Pollinator Strips and Native Trees dominate, placed near existing
+    green patches to build ecological corridors.
+
+Scenario C: "Tight Budget"
+  Set budget to ₹2,00,000 (low)
+  → Only ~10-15 cells get interventions, all high-value-per-cost options.
+    Demonstrates intelligent prioritization under constraint.
+
+Scenario D: "Unlimited Budget"
+  Set budget to ₹20,00,000 (maximum)
+  → Nearly every feasible cell gets an intervention. Shows the system
+    knows to skip buildings and infeasible locations.
+
+
+================================================================================
+                    Built for PCCOE Hackathon · September 2026
+================================================================================
