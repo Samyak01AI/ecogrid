@@ -15,9 +15,14 @@ export interface CellProperties {
   land_use: 'sidewalk' | 'plaza' | 'roadside' | 'open_land' | 'building' | 'green_space';
 }
 
+export interface GeoJsonPolygon {
+  type: 'Polygon';
+  coordinates: number[][][];
+}
+
 export interface GridFeature {
   type: 'Feature';
-  geometry: GeoJSON.Polygon;
+  geometry: GeoJsonPolygon;
   properties: CellProperties;
 }
 

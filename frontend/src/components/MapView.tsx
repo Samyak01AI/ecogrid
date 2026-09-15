@@ -7,9 +7,9 @@
 
 import { useRef, useEffect, useCallback } from 'react';
 import { Map as MapLibreMap, NavigationControl, Popup } from 'maplibre-gl';
-import type { GeoJSONSource, MapMouseEvent } from 'maplibre-gl';
+import type { GeoJSONSource, MapMouseEvent, MapGeoJSONFeature } from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
-import type { GridData, MapLayer, CellRecommendation, CellProperties } from '../types';
+import type { GridData, GridFeature, MapLayer, CellRecommendation, CellProperties } from '../types';
 import {
   getScoreColor,
   INTERVENTION_COLORS,
@@ -50,7 +50,7 @@ function computeFillColors(
       }
     } else {
       const propKey = LAYER_PROPERTY_MAP[activeLayer];
-      const value = (props as Record<string, unknown>)[propKey] as number;
+      const value = (props as unknown as Record<string, unknown>)[propKey] as number;
       colors[cellId] = getScoreColor(value, activeLayer);
     }
   }
@@ -118,7 +118,7 @@ export default function MapView({
       },
       center: [73.8567, 18.5204],
       zoom: 15,
-      attributionControl: true,
+      attributionControl: false,
     });
 
     map.addControl(new NavigationControl(), 'top-left');
@@ -126,7 +126,7 @@ export default function MapView({
     // Set up event handlers (use refs to avoid stale closures)
     map.on('load', () => {
       // Click handler
-      map.on('click', 'grid-fill', (e: MapMouseEvent & { features?: GeoJSON.Feature[] }) => {
+      map.on('click', 'grid-fill', (e: MapMouseEvent & { features?: MapGeoJSONFeature[] }) => {
         if (e.features && e.features[0]) {
           const props = e.features[0].properties;
           if (props?.cell_id) {
@@ -151,7 +151,7 @@ export default function MapView({
         }
       });
 
-      map.on('mousemove', 'grid-fill', (e: MapMouseEvent & { features?: GeoJSON.Feature[] }) => {
+      map.on('mousemove', 'grid-fill', (e: MapMouseEvent & { features?: MapGeoJSONFeature[] }) => {
         if (e.features && e.features[0]) {
           const props = e.features[0].properties;
           if (map.getLayer('grid-highlight')) {
@@ -215,9 +215,9 @@ export default function MapView({
       const colors = computeFillColors(gridData, activeLayer, recMap);
 
       // Create GeoJSON with colors baked into properties
-      const coloredData: GeoJSON.FeatureCollection = {
-        type: 'FeatureCollection',
-        features: gridData.features.map((f) => ({
+      const coloredData = {
+        type: 'FeatureCollection' as const,
+        features: gridData.features.map((f: GridFeature) => ({
           ...f,
           properties: {
             ...f.properties,

@@ -4,7 +4,7 @@
 
 import { useState } from 'react';
 import type { MapLayer, BenefitWeights, OptimizeResponse } from '../types';
-import { formatINR, formatINRFull, LAYER_LABELS, INTERVENTION_COLORS_SOLID, INTERVENTION_LABELS } from '../colors';
+import { formatINR, formatINRFull, LAYER_LABELS, INTERVENTION_LABELS } from '../colors';
 
 interface ControlPanelProps {
   budget: number;
