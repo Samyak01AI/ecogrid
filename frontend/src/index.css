@@ -79,6 +79,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
 html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -90,12 +95,12 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
-  overflow: hidden;
-  height: 100vh;
 }
 
 #root {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -106,7 +111,9 @@ body {
   display: grid;
   grid-template-columns: 360px 1fr;
   grid-template-rows: 64px 1fr;
-  height: 100vh;
+  /* Fill #root which is now flex: 1; do NOT use 100vh — that ignores flex parent */
+  flex: 1;
+  min-height: 0;
   overflow: hidden;
 }
 
@@ -432,13 +439,27 @@ input[type="range"].pedestrian-slider::-webkit-slider-thumb { background: var(--
    Map Container
    ---------------------------------------------------------------- */
 .map-area {
+  /* CSS Grid item: must clamp to its grid cell, not expand to content */
   position: relative;
   overflow: hidden;
+  min-width: 0;        /* prevent grid blowout */
+  min-height: 0;       /* prevent grid blowout */
+  /* Do NOT set width/height: 100% on a grid item — the grid already sizes it */
 }
 
 .map-container {
-  width: 100%;
-  height: 100%;
+  /* Fill the map-area entirely using absolute positioning */
+  position: absolute;
+  inset: 0;
+  /* Leaflet itself sizes the .leaflet-container; make sure it can't overflow */
+  overflow: hidden;
+}
+
+/* Leaflet container must fill its parent; Leaflet JS sets width/height in px,
+   so we override with !important to ensure correct dimensions */
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 /* Map overlay controls */
@@ -453,7 +474,8 @@ input[type="range"].pedestrian-slider::-webkit-slider-thumb { background: var(--
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--color-border);
   min-width: 180px;
-  z-index: 10;
+  /* Must be above Leaflet tile/overlay panes (~200-400) */
+  z-index: 800;
 }
 
 .map-legend h4 {
@@ -512,7 +534,9 @@ input[type="range"].pedestrian-slider::-webkit-slider-thumb { background: var(--
   box-shadow: var(--shadow-xl);
   border: 1px solid var(--color-border);
   overflow-y: auto;
-  z-index: 20;
+  /* Leaflet's highest internal z-index (popup-pane) is ~700.
+     Set this above 1000 so it appears over all Leaflet layers. */
+  z-index: 1000;
   animation: slideIn var(--transition-slow) ease-out;
 }
 
@@ -914,21 +938,21 @@ input[type="range"].pedestrian-slider::-webkit-slider-thumb { background: var(--
 }
 
 /* ----------------------------------------------------------------
-   Tooltip (MapLibre popup styling)
+   Tooltip (Leaflet tooltip styling)
    ---------------------------------------------------------------- */
-.maplibregl-popup-content {
+.ecogrid-popup {
   background: rgba(255,255,255,0.97) !important;
   backdrop-filter: blur(12px);
   border-radius: var(--radius-md) !important;
   box-shadow: var(--shadow-lg) !important;
-  padding: 12px 16px !important;
   border: 1px solid var(--color-border) !important;
   font-family: var(--font-sans) !important;
   font-size: 0.8rem !important;
   max-width: 240px !important;
+  padding: 12px 16px !important;
 }
 
-.maplibregl-popup-tip {
+.ecogrid-popup::before {
   border-top-color: rgba(255,255,255,0.97) !important;
 }
 
@@ -965,3 +989,4 @@ input[type="range"].pedestrian-slider::-webkit-slider-thumb { background: var(--
   font-family: var(--font-mono);
   font-weight: 600;
 }
+

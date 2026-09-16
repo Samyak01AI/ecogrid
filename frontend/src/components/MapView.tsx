@@ -1,15 +1,17 @@
 /**
- * MapView — MapLibre GL JS map rendering the grid cells.
+ * MapView — Leaflet map rendering the 10×10 grid cells.
  * Handles cell coloring by active layer, click interactions, and tooltips.
- * 
- * Uses MapLibre v6 named exports (Map, NavigationControl, Popup).
+ *
+ * Uses Leaflet with explicit L.Polygon layers for each grid cell, managed
+ * in a single FeatureGroup. This approach is fully deterministic across
+ * development and production builds — no WebGL, Web Workers, or style
+ * expression evaluation that could break during Rollup bundling.
  */
 
 import { useRef, useEffect, useCallback } from 'react';
-import { Map as MapLibreMap, NavigationControl, Popup } from 'maplibre-gl';
-import type { GeoJSONSource, MapMouseEvent, MapGeoJSONFeature } from 'maplibre-gl';
-import 'maplibre-gl/dist/maplibre-gl.css';
-import type { GridData, GridFeature, MapLayer, CellRecommendation, CellProperties } from '../types';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import type { GridData, MapLayer, CellRecommendation, CellProperties } from '../types';
 import {
   getScoreColor,
   INTERVENTION_COLORS,
@@ -29,7 +31,9 @@ interface MapViewProps {
   onCloseExplain: () => void;
 }
 
-// Generate fill colors for each feature based on active layer and recommendations
+// ─── Data Layer: compute fill colors for each cell ───────────────────────────
+// This function is unchanged from the original — it maps grid data + active
+// layer + recommendations into a cell_id → color lookup.
 function computeFillColors(
   gridData: GridData,
   activeLayer: MapLayer,
@@ -58,6 +62,7 @@ function computeFillColors(
   return colors;
 }
 
+// ─── Visualization Layer: Leaflet map + grid polygons ─────────────────────────
 export default function MapView({
   gridData,
   activeLayer,
@@ -68,9 +73,10 @@ export default function MapView({
   onCloseExplain,
 }: MapViewProps) {
   const mapContainerRef = useRef<HTMLDivElement>(null);
-  const mapRef = useRef<MapLibreMap | null>(null);
-  const popupRef = useRef<Popup | null>(null);
-  // Use refs to avoid stale closures in map event handlers
+  const mapRef = useRef<L.Map | null>(null);
+  const gridLayerRef = useRef<L.FeatureGroup | null>(null);
+
+  // Use refs to avoid stale closures in Leaflet event handlers
   const activeLayerRef = useRef(activeLayer);
   const onCellClickRef = useRef(onCellClick);
   const recommendationsRef = useRef(recommendations);
@@ -78,7 +84,7 @@ export default function MapView({
   activeLayerRef.current = activeLayer;
   onCellClickRef.current = onCellClick;
   recommendationsRef.current = recommendations;
-  const mapLoadedRef = useRef(false);
+
   // Build recommendation lookup
   const buildRecMap = useCallback(() => {
     const map = new Map<string, CellRecommendation>();
@@ -88,100 +94,139 @@ export default function MapView({
     return map;
   }, [recommendations]);
 
-  // Initialize map (only once)
+  // ── Initialize map (only once) ──────────────────────────────────────────────
   useEffect(() => {
     if (!mapContainerRef.current || mapRef.current) return;
 
-    const map = new MapLibreMap({
-      container: mapContainerRef.current,
-      style: {
-        version: 8,
-        sources: {
-          'osm-tiles': {
-            type: 'raster',
-            tiles: [
-              'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-            ],
-            tileSize: 256,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-          },
-        },
-        layers: [
-          {
-            id: 'osm-tiles',
-            type: 'raster',
-            source: 'osm-tiles',
-            minzoom: 0,
-            maxzoom: 19,
-          },
-        ],
-      },
-      center: [73.8567, 18.5204],
-      zoom: 15,
-      attributionControl: false,
-    });
+    console.log('[EcoGrid] Initializing Leaflet map...');
 
-    map.addControl(new NavigationControl(), 'top-left');
+    let resizeObserver: ResizeObserver | null = null;
 
-    // Set up event handlers (use refs to avoid stale closures)
-    map.on('load', () => {
-      mapLoadedRef.current = true;
-      // Click handler
-      map.on('click', 'grid-fill', (e: MapMouseEvent & { features?: MapGeoJSONFeature[] }) => {
-        if (e.features && e.features[0]) {
-          const props = e.features[0].properties;
-          if (props?.cell_id) {
-            onCellClickRef.current(props.cell_id);
-          }
-        }
+    try {
+      const map = L.map(mapContainerRef.current, {
+        center: [18.5204, 73.8567],
+        zoom: 15,
+        zoomControl: false,
+        attributionControl: true,
       });
 
-      // Hover handlers
-      map.on('mouseenter', 'grid-fill', () => {
-        map.getCanvas().style.cursor = 'pointer';
+      // Add zoom control to top-left (matching original position)
+      L.control.zoom({ position: 'topleft' }).addTo(map);
+
+      // Add OpenStreetMap tiles (same source as before)
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        maxZoom: 19,
+      }).addTo(map);
+
+      // Create the dedicated grid layer group (empty initially)
+      const gridLayer = L.featureGroup().addTo(map);
+      gridLayerRef.current = gridLayer;
+      mapRef.current = map;
+
+      // CSS Grid layout is not finalized at mount time.
+      // Use double-RAF: first RAF = browser has calculated layout,
+      // second RAF = browser has painted, so the container has its real px size.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          if (mapRef.current) {
+            mapRef.current.invalidateSize({ animate: false });
+          }
+        });
       });
 
-      map.on('mouseleave', 'grid-fill', () => {
-        map.getCanvas().style.cursor = '';
-        if (popupRef.current) {
-          popupRef.current.remove();
-          popupRef.current = null;
-        }
-        if (map.getLayer('grid-highlight')) {
-          map.setFilter('grid-highlight', ['==', 'cell_id', '']);
+      // Keep Leaflet in sync whenever the container element changes size
+      const container = mapContainerRef.current;
+      resizeObserver = new ResizeObserver(() => {
+        if (mapRef.current) {
+          mapRef.current.invalidateSize({ animate: false });
         }
       });
+      resizeObserver.observe(container);
 
-      map.on('mousemove', 'grid-fill', (e: MapMouseEvent & { features?: MapGeoJSONFeature[] }) => {
-        if (e.features && e.features[0]) {
-          const props = e.features[0].properties;
-          if (map.getLayer('grid-highlight')) {
-            map.setFilter('grid-highlight', ['==', 'cell_id', props?.cell_id || '']);
-          }
+      console.log('[EcoGrid] Map initialized successfully');
+    } catch (err) {
+      console.error('[EcoGrid] Failed to initialize map:', err);
+    }
 
-          // Show tooltip popup
-          if (popupRef.current) {
-            popupRef.current.remove();
-          }
-          const popup = new Popup({
-            closeButton: false,
-            closeOnClick: false,
-            offset: 12,
-          });
+    return () => {
+      // Disconnect ResizeObserver BEFORE removing the map
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+        resizeObserver = null;
+      }
+      if (mapRef.current) {
+        mapRef.current.remove();
+        mapRef.current = null;
+        gridLayerRef.current = null;
+      }
+    };
+  }, []);
 
+  // ── Build/update grid polygons when data, layer, or recommendations change ──
+  useEffect(() => {
+    const map = mapRef.current;
+    const gridLayer = gridLayerRef.current;
+    if (!map || !gridLayer || !gridData) return;
+
+    console.log(
+      `[EcoGrid] Rebuilding grid: ${gridData.features.length} cells, layer="${activeLayer}"`
+    );
+
+    try {
+      // Clear all existing grid polygons (safe — only affects this FeatureGroup)
+      gridLayer.clearLayers();
+
+      // Compute colors for each cell
+      const recMap = buildRecMap();
+      const colors = computeFillColors(gridData, activeLayer, recMap);
+
+      let cellCount = 0;
+
+      for (const feature of gridData.features) {
+        const props = feature.properties;
+        const cellId = props.cell_id;
+        const fillColor = colors[cellId] || UNSELECTED_COLOR;
+
+        // Convert GeoJSON [lng, lat] coordinates to Leaflet [lat, lng]
+        const coords = feature.geometry.coordinates[0];
+        if (!coords || coords.length < 4) {
+          console.warn(`[EcoGrid] Skipping cell ${cellId}: invalid coordinates`);
+          continue;
+        }
+
+        const latLngs: L.LatLngExpression[] = coords.map(
+          (coord: number[]) => [coord[1], coord[0]] as L.LatLngTuple
+        );
+
+        // Create polygon for this cell
+        const polygon = L.polygon(latLngs, {
+          fillColor: fillColor,
+          fillOpacity: 0.8,
+          color: 'rgba(255,255,255,0.6)',
+          weight: 1.5,
+        });
+
+        // ── Click handler ──
+        polygon.on('click', () => {
+          console.log(`[EcoGrid] Cell clicked: ${cellId}`);
+          onCellClickRef.current(cellId);
+        });
+
+        // ── Hover: use Leaflet's built-in tooltip (doesn't intercept clicks) ──
+        const buildTooltipContent = (): string => {
           const currentLayer = activeLayerRef.current;
           const propKey = LAYER_PROPERTY_MAP[currentLayer] || 'heat_score';
-          const scoreValue = props?.[propKey] ?? 'N/A';
+          const scoreValue = (props as unknown as Record<string, unknown>)[propKey] ?? 'N/A';
 
-          // Build recommendation map from current refs
-          const recMap = new Map<string, CellRecommendation>();
+          const currentRecMap = new Map<string, CellRecommendation>();
           for (const rec of recommendationsRef.current) {
-            recMap.set(rec.cell_id, rec);
+            currentRecMap.set(rec.cell_id, rec);
           }
-          const rec = recMap.get(props?.cell_id || '');
+          const rec = currentRecMap.get(cellId);
 
-          let html = `<div class="popup-cell-id">${props?.cell_id}</div>`;
-          html += `<div class="popup-land-use">${(props?.land_use || '').replace('_', ' ')}</div>`;
+          let html = `<div class="popup-cell-id">${cellId}</div>`;
+          html += `<div class="popup-land-use">${(props.land_use || '').replace('_', ' ')}</div>`;
 
           if (currentLayer === 'plan' && rec) {
             html += `<div style="font-size:0.8rem;font-weight:600;color:#059669">${rec.intervention_name}</div>`;
@@ -190,94 +235,61 @@ export default function MapView({
             html += `<div class="popup-score-row"><span class="popup-score-label">Score:</span><span class="popup-score-value">${typeof scoreValue === 'number' ? Number(scoreValue).toFixed(2) : scoreValue}</span></div>`;
             html += `</div>`;
           }
+          return html;
+        };
 
-          popup.setLngLat(e.lngLat).setHTML(html).addTo(map);
-          popupRef.current = popup;
-        }
-      });
-    });
-
-    mapRef.current = map;
-
-    return () => {
-      map.remove();
-      mapRef.current = null;
-    };
-  }, []);
-
-  // Add/update grid data and colors when gridData, activeLayer, or recommendations change
-  useEffect(() => {
-    const map = mapRef.current;
-    if (!map || !gridData) return;
-
-    const updateGrid = () => {
-      // Compute colors
-      const recMap = buildRecMap();
-      const colors = computeFillColors(gridData, activeLayer, recMap);
-
-      // Create GeoJSON with colors baked into properties
-      const coloredData = {
-        type: 'FeatureCollection' as const,
-        features: gridData.features.map((f: GridFeature) => ({
-          ...f,
-          properties: {
-            ...f.properties,
-            _fillColor: colors[f.properties.cell_id] || UNSELECTED_COLOR,
-          },
-        })),
-      };
-
-      if (map.getSource('grid')) {
-        // Update existing source
-        (map.getSource('grid') as GeoJSONSource).setData(coloredData);
-      } else {
-        // Add source and layers for the first time
-        map.addSource('grid', {
-          type: 'geojson',
-          data: coloredData,
+        polygon.bindTooltip(buildTooltipContent, {
+          sticky: true,
+          direction: 'top',
+          offset: L.point(0, -12),
+          className: 'ecogrid-popup',
         });
 
-        map.addLayer({
-          id: 'grid-fill',
-          type: 'fill',
-          source: 'grid',
-          paint: {
-            'fill-color': ['get', '_fillColor'],
-            'fill-opacity': 0.8,
-          },
+        // ── Hover highlight ──
+        polygon.on('mouseover', (e: L.LeafletMouseEvent) => {
+          const target = e.target as L.Polygon;
+          target.setStyle({
+            color: '#ffffff',
+            weight: 3,
+          });
+          target.bringToFront();
         });
 
-        map.addLayer({
-          id: 'grid-outline',
-          type: 'line',
-          source: 'grid',
-          paint: {
-            'line-color': 'rgba(255,255,255,0.6)',
-            'line-width': 1.5,
-          },
+        polygon.on('mouseout', (e: L.LeafletMouseEvent) => {
+          const target = e.target as L.Polygon;
+          target.setStyle({
+            color: 'rgba(255,255,255,0.6)',
+            weight: 1.5,
+          });
         });
 
-        map.addLayer({
-          id: 'grid-highlight',
-          type: 'line',
-          source: 'grid',
-          paint: {
-            'line-color': '#ffffff',
-            'line-width': 3,
-          },
-          filter: ['==', 'cell_id', ''],
+        // Cursor styling
+        polygon.on('mouseover', () => {
+          if (mapContainerRef.current) {
+            mapContainerRef.current.style.cursor = 'pointer';
+          }
         });
+        polygon.on('mouseout', () => {
+          if (mapContainerRef.current) {
+            mapContainerRef.current.style.cursor = '';
+          }
+        });
+
+        polygon.addTo(gridLayer);
+        cellCount++;
       }
-    };
 
-    const tryUpdate = () => {
-      if (mapLoadedRef.current) {
-        updateGrid();
-      } else {
-        map.once('load', updateGrid); // safe now: only attached if truly not loaded yet
+      console.log(`[EcoGrid] Grid rendered: ${cellCount} cells`);
+
+      if (cellCount !== 100) {
+        console.warn(
+          `[EcoGrid] Expected 100 cells but rendered ${cellCount}. ` +
+            `Grid data has ${gridData.features.length} features.`
+        );
       }
-    };
-    tryUpdate();
+    } catch (err) {
+      console.error('[EcoGrid] Failed to render grid:', err);
+    }
   }, [gridData, activeLayer, recommendations, buildRecMap]);
 
   return (
