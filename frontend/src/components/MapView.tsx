@@ -78,7 +78,7 @@ export default function MapView({
   activeLayerRef.current = activeLayer;
   onCellClickRef.current = onCellClick;
   recommendationsRef.current = recommendations;
-
+  const mapLoadedRef = useRef(false);
   // Build recommendation lookup
   const buildRecMap = useCallback(() => {
     const map = new Map<string, CellRecommendation>();
@@ -125,6 +125,7 @@ export default function MapView({
 
     // Set up event handlers (use refs to avoid stale closures)
     map.on('load', () => {
+      mapLoadedRef.current = true;
       // Click handler
       map.on('click', 'grid-fill', (e: MapMouseEvent & { features?: MapGeoJSONFeature[] }) => {
         if (e.features && e.features[0]) {
@@ -171,7 +172,7 @@ export default function MapView({
           const currentLayer = activeLayerRef.current;
           const propKey = LAYER_PROPERTY_MAP[currentLayer] || 'heat_score';
           const scoreValue = props?.[propKey] ?? 'N/A';
-          
+
           // Build recommendation map from current refs
           const recMap = new Map<string, CellRecommendation>();
           for (const rec of recommendationsRef.current) {
@@ -269,11 +270,14 @@ export default function MapView({
       }
     };
 
-    if (map.isStyleLoaded()) {
-      updateGrid();
-    } else {
-      map.on('load', updateGrid);
-    }
+    const tryUpdate = () => {
+      if (mapLoadedRef.current) {
+        updateGrid();
+      } else {
+        map.once('load', updateGrid); // safe now: only attached if truly not loaded yet
+      }
+    };
+    tryUpdate();
   }, [gridData, activeLayer, recommendations, buildRecMap]);
 
   return (
