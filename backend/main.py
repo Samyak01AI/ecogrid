@@ -20,7 +20,7 @@ app = FastAPI(title="EcoGrid AI", version="0.1.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["ecogrid-xy92.vercel.app"],
+    allow_origins=["https://ecogrid-xy92-cbwvdwky5-ethhacker01s-projects.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
